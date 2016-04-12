@@ -18,7 +18,11 @@
             Password: <asp:TextBox ID="passwordTextBox" runat="server" />
         </p>
         <asp:Button Text="Login" runat="server" OnClick="LoginClicked" style="margin-left: 0px" Width="50px" />
+        <br />
     </div>
+        <br />
+        <br />
+        <asp:Label ID="errorLogin" runat="server"></asp:Label>
     </form>
 </body>
 </html>

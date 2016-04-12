@@ -56,5 +56,17 @@ namespace ASQLProject {
             }
             conn.Close();
         }
+
+        public DataTable GetUser()
+        {
+            DataTable dataTable = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Users");
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            cmd.Connection = conn;
+            adapter.SelectCommand = cmd;
+            adapter.Fill(dataTable);
+            
+            return dataTable;
+        }
     }
 }

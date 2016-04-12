@@ -15,6 +15,13 @@ namespace ASQLProject {
                 tdCreateUser.Visible = false;
                 tdCreateProduct.Visible = false;
                 userFbLabel.Visible = false;
+
+                if (Session["User"] == "general")
+                {
+                    changeSchedule.Visible = false;
+                    createProductButton.Visible = false;
+                    createUserButton.Visible = false;
+                }
             }
         }
 
