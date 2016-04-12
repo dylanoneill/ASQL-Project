@@ -37,6 +37,7 @@ namespace ASQLProject {
         protected void addUserButton_Click(object sender, EventArgs e) {
 
             userFbLabel.Visible = true;
+            //Passwords must match
             if (passwordTextbox.Text == confirmTextbox.Text) {
 
                 bool isAdmin = false;
@@ -48,6 +49,7 @@ namespace ASQLProject {
                     dal.AddUser(usernameTextbox.Text, passwordTextbox.Text, isAdmin);
                     userFbLabel.Text = "User Created Successfully.";
                 }
+                //Should only throw an exception when username already exists in Users table
                 catch (SqlException) {
                     userFbLabel.Text = "Username already exists.";
                 }

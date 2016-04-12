@@ -55,7 +55,11 @@
                               ControlToValidate="skuTextbox"
                               Text="You must enter an SKU."
                               runat="server" /></p>
-                      <p>Description: <asp:TextBox ID="descTextbox" runat="server" /></p>
+                      <p>Description: <asp:TextBox ID="descTextbox" runat="server" />
+                          <asp:RequiredFieldValidator
+                              ControlToValidate="descTextbox"
+                              Text="Description Required."
+                              runat="server" /></p>
                       <p>Colour: <asp:DropDownList ID="colourDropdown" runat="server">                               
                                     <asp:ListItem Text="Blue" Value="Blue" />
                                     <asp:ListItem Text="Green" Value="Green" />
@@ -64,6 +68,9 @@
                                  </asp:DropDownList></p>
                       <asp:Button ID="addProductButton" Text="Create" runat="server" OnClick="addProductButton_Click" />
                       <asp:Label ID="productFbLabel" runat="server" />
+                  </td>
+                  <td id="tdSchedule" runat="server">
+
                   </td>
               </tr>
           </table>
