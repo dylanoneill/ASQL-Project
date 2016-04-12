@@ -13,16 +13,16 @@
           <table style="margin-bottom: 0px">
               <tr>
                   <td>
-                    <asp:Button Text="Generate Reports" ID="reportButton" OnClick="reportButton_Click" runat="server" Width="201px" />
+                    <asp:Button Text="Generate Reports" ID="reportButton" OnClick="reportButton_Click" runat="server" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
-                    <asp:Button Text="Change Schedule" runat="server" Height="26px" Width="201px" />
+                    <asp:Button Text="Change Schedule" runat="server" Height="26px" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
-                    <asp:Button Text="Add Product" ID="createProductButton" runat="server" OnClick="createProductButton_Click" Width="201px" />
+                    <asp:Button Text="Add Product" ID="createProductButton" runat="server" OnClick="createProductButton_Click" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
-                    <asp:Button Text="Create New User" ID="createUserButton" runat="server" OnClick="createUserButton_Click" Width="201px" />
+                    <asp:Button Text="Create New User" ID="createUserButton" runat="server" OnClick="createUserButton_Click" Width="201px" CausesValidation="False" />
                   </td>           
                   <td />
                   <td />
@@ -46,11 +46,24 @@
                         runat="server" /></p>
 
                     <p>Admin: <asp:CheckBox ID="adminCheckbox" runat="server" /></p>
-                    <asp:Button Text="Create" ID="createButton" runat="server" OnClick ="createButton_Click"/>
+                    <asp:Button Text="Create" ID="addUserButton" runat="server" OnClick="addUserButton_Click"/>
                     <asp:Label ID="userFbLabel" runat="server" />      
                   </td>
                   <td id="tdCreateProduct" runat="server" >
-
+                      <p>SKU: <asp:TextBox ID="skuTextbox" runat="server" />
+                          <asp:RequiredFieldValidator
+                              ControlToValidate="skuTextbox"
+                              Text="You must enter an SKU."
+                              runat="server" /></p>
+                      <p>Description: <asp:TextBox ID="descTextbox" runat="server" /></p>
+                      <p>Colour: <asp:DropDownList ID="colourDropdown" runat="server">                               
+                                    <asp:ListItem Text="Blue" Value="Blue" />
+                                    <asp:ListItem Text="Green" Value="Green" />
+                                    <asp:ListItem Text="Red" Value="Red" />
+                                    <asp:ListItem Text="Clear" Value="Clear" />
+                                 </asp:DropDownList></p>
+                      <asp:Button ID="addProductButton" Text="Create" runat="server" OnClick="addProductButton_Click" />
+                      <asp:Label ID="productFbLabel" runat="server" />
                   </td>
               </tr>
           </table>

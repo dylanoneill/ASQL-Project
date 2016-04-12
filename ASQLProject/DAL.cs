@@ -11,7 +11,6 @@ namespace ASQLProject {
 
         SqlConnection conn;
 
-
         public DAL() {
 
             ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings["yoyoConn"];
@@ -43,17 +42,26 @@ namespace ASQLProject {
         public void AddUser(string username, string password, bool isAdmin) {
             conn.Open();
             if (isAdmin == true) {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Users(Username, Password, isAdmin) VALUES('" +
+                SqlCommand cmd = new SqlCommand("INSERT INTO Users (Username, Password, isAdmin) VALUES ('" +
                     username + "', '" + password + "', 1)");
                 cmd.Connection = conn;
                 cmd.ExecuteNonQuery();
             }
             else {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Users(Username, Password, isAdmin) VALUES('" +
+                SqlCommand cmd = new SqlCommand("INSERT INTO Users (Username, Password, isAdmin) VALUES ('" +
                    username + "', '" + password + "', 0)");
                 cmd.Connection = conn;
                 cmd.ExecuteNonQuery();
             }
+            conn.Close();
+        }
+
+        public void AddProduct(string SKU, string description, string colour) {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Product (SKU, Description, Colour) VALUES ('" +
+                SKU + "', '" + description + "', '" + colour + "')");
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
             conn.Close();
         }
     }
