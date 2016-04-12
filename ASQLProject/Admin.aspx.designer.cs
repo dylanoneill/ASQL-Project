@@ -31,15 +31,6 @@ namespace ASQLProject {
         protected global::System.Web.UI.WebControls.Button reportButton;
         
         /// <summary>
-        /// changeSchedule control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button changeSchedule;
-        
-        /// <summary>
         /// createProductButton control.
         /// </summary>
         /// <remarks>
@@ -103,13 +94,13 @@ namespace ASQLProject {
         protected global::System.Web.UI.WebControls.CheckBox adminCheckbox;
         
         /// <summary>
-        /// createButton control.
+        /// addUserButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button createButton;
+        protected global::System.Web.UI.WebControls.Button addUserButton;
         
         /// <summary>
         /// userFbLabel control.
@@ -128,5 +119,50 @@ namespace ASQLProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableCell tdCreateProduct;
+        
+        /// <summary>
+        /// skuTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox skuTextbox;
+        
+        /// <summary>
+        /// descTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox descTextbox;
+        
+        /// <summary>
+        /// colourDropdown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList colourDropdown;
+        
+        /// <summary>
+        /// addProductButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addProductButton;
+        
+        /// <summary>
+        /// productFbLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label productFbLabel;
     }
 }
