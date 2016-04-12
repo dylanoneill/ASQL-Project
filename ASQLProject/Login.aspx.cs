@@ -26,7 +26,7 @@ namespace ASQLProject {
         {
             
             DataTable dataTable = new DataTable();
-            dataTable = dal.GetUser();
+            dataTable = dal.GetUsers();
 
             foreach (DataRow row in dataTable.Rows)
             {
