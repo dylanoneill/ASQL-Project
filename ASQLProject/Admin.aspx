@@ -15,7 +15,7 @@
     </style>
 </head>
 <body style="background-color:lightgrey"> 
-    <h1 style="color:white; background-color:cadetblue; font-family:Arial;">&nbsp;Administration</h1>
+    <h1 style="color:white; background-color:cadetblue; font-family:Arial;">&nbsp;Main Menu</h1>
     <form id="adminForm" runat="server">
     <div>
           <table style="margin-bottom: 0px">

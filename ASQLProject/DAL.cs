@@ -39,6 +39,17 @@ namespace ASQLProject {
             return dataTable;
         }
 
+        public DataTable DefectPareto() {
+
+            DataTable dataTable = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT Reason, COUNT(*) AS 'Amount' FROM Defect GROUP BY Reason ORDER BY 'Amount' DESC");
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            cmd.Connection = conn;
+            adapter.SelectCommand = cmd;
+            adapter.Fill(dataTable);
+            return dataTable;
+        }
+
         public void AddUser(string username, string password, bool isAdmin) {
             conn.Open();
             if (isAdmin == true) {
