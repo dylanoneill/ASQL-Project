@@ -26,10 +26,6 @@ namespace ASQLProject {
             }
         }
 
-        protected void reportButton_Click(object sender, EventArgs e) {
-            Response.Redirect("Report.aspx");
-        }
-
         protected void createProductButton_Click(object sender, EventArgs e) {
 
             tdCreateProduct.Visible = true;
@@ -75,6 +71,21 @@ namespace ASQLProject {
             catch (SqlException) {
                 productFbLabel.Text = "Error Creating Product.";
             }
+        }
+
+        protected void finalYieldButton_Click(object sender, EventArgs e) {
+            Session["Report"] = "Final Yield";
+            Response.Redirect("Chart.aspx");
+        }
+
+        protected void defectParetoButton_Click(object sender, EventArgs e) {
+            Session["Report"] = "Defects";
+            Response.Redirect("Chart.aspx");
+        }
+
+        protected void firstYieldButton_Click(object sender, EventArgs e) {
+            Session["Report"] = "First Yield";
+            Response.Redirect("Chart.aspx");
         }
     }
 }

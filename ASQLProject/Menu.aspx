@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="ASQLProject.Admin" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="ASQLProject.Admin" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Prestige YoYo</title>
     <style type="text/css">
         .auto-style1 {
             width: 10px;
@@ -16,12 +16,18 @@
 </head>
 <body style="background-color:lightgrey"> 
     <h1 style="color:white; background-color:cadetblue; font-family:Arial;">&nbsp;Main Menu</h1>
-    <form id="adminForm" runat="server">
+    <form id="menuForm" runat="server">
     <div>
           <table style="margin-bottom: 0px">
               <tr>
                   <td>
-                    <asp:Button Text="Generate Reports" ID="reportButton" OnClick="reportButton_Click" runat="server" Width="201px" CausesValidation="False" />
+                    <asp:Button Text="First Time Yield Report" ID="firstYieldButton" runat="server" OnClick="firstYieldButton_Click" Height="26px" Width="201px" />
+                    <br />
+                    <br />
+                    <asp:Button Text="Final Yield Report" ID="finalYieldButton" runat="server" OnClick="finalYieldButton_Click" Width="201px" />
+                    <br />
+                    <br />
+                    <asp:Button Text="Defect Pareto Diagrams" ID="defectParetoButton" runat="server" OnClick="defectParetoButton_Click" Width="201px" />
                     <br />
                     <br />
                     <asp:Button Text="Change Schedule" ID="scheduleButton" runat="server" Height="26px" Width="201px" CausesValidation="False" />

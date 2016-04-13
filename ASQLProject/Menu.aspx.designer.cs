@@ -13,22 +13,40 @@ namespace ASQLProject {
     public partial class Admin {
         
         /// <summary>
-        /// adminForm control.
+        /// menuForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm adminForm;
+        protected global::System.Web.UI.HtmlControls.HtmlForm menuForm;
         
         /// <summary>
-        /// reportButton control.
+        /// firstYieldButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button reportButton;
+        protected global::System.Web.UI.WebControls.Button firstYieldButton;
+        
+        /// <summary>
+        /// finalYieldButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button finalYieldButton;
+        
+        /// <summary>
+        /// defectParetoButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button defectParetoButton;
         
         /// <summary>
         /// scheduleButton control.

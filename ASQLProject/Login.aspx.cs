@@ -18,7 +18,6 @@ namespace ASQLProject {
 
         protected void LoginClicked(object sender, EventArgs e) {
 
-            //Response.Redirect("Admin.aspx");
             VerifyUser(usernameTextBox.Text);
         }
 
@@ -37,12 +36,12 @@ namespace ASQLProject {
                         if (Convert.ToInt32(row[2]) == 1)
                         {
                             Session["User"] = "admin";
-                            Response.Redirect("Admin.aspx");
+                            Response.Redirect("Menu.aspx");
                         }
                         else
                         {
                             Session["User"] = "general";
-                            Response.Redirect("Admin.aspx");
+                            Response.Redirect("Menu.aspx");
                         }
                     }
                     else
