@@ -56,6 +56,16 @@ namespace ASQLProject {
             conn.Close();
         }
 
+        public void AddProduct(string SKU, string description, string colour) {
+            //Adds a new product to the database
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Product (SKU, Description, Colour) VALUES ('" +
+                SKU + "', '" + description + "', '" + colour + "')");
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
         public DataTable GetUsers()
         {
             DataTable dataTable = new DataTable();
@@ -65,7 +75,6 @@ namespace ASQLProject {
             adapter.SelectCommand = cmd;
             adapter.Fill(dataTable);
             return dataTable;
-
         }
     }
 }

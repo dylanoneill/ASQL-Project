@@ -15,7 +15,7 @@
             Username: <asp:TextBox ID="usernameTextBox" runat="server" />
         </p>
         <p>
-            Password: <asp:TextBox ID="passwordTextBox" runat="server" />
+            Password: <asp:TextBox ID="passwordTextBox" runat="server" Textmode="Password" />
         </p>
         <asp:Button Text="Login" runat="server" OnClick="LoginClicked" style="margin-left: 0px" Width="50px" />
         <br />
