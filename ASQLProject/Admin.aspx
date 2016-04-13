@@ -16,7 +16,7 @@
                     <asp:Button Text="Generate Reports" ID="reportButton" OnClick="reportButton_Click" runat="server" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
-                    <asp:Button Text="Change Schedule" runat="server" Height="26px" Width="201px" CausesValidation="False" />
+                    <asp:Button Text="Change Schedule" ID="scheduleButton" runat="server" Height="26px" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
                     <asp:Button Text="Add Product" ID="createProductButton" runat="server" OnClick="createProductButton_Click" Width="201px" CausesValidation="False" />

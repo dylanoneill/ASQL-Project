@@ -17,9 +17,9 @@ namespace ASQLProject {
                 tdCreateProduct.Visible = false;
                 userFbLabel.Visible = false;
 
-                if (Session["User"] == "general")
+                if ((String)Session["User"] == "general")
                 {
-                    changeSchedule.Visible = false;
+                    scheduleButton.Visible = false;
                     createProductButton.Visible = false;
                     createUserButton.Visible = false;
                 }
