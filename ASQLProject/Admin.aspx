@@ -5,6 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 10px;
+        }
+        .auto-style2 {
+            width: 389px;
+        }
+    </style>
 </head>
 <body style="background-color:lightgrey"> 
     <h1 style="color:white; background-color:cadetblue; font-family:Arial;">&nbsp;Administration</h1>
@@ -25,8 +33,8 @@
                     <asp:Button Text="Create New User" ID="createUserButton" runat="server" OnClick="createUserButton_Click" Width="201px" CausesValidation="False" />
                   </td>           
                   <td />
-                  <td />
-                  <td id="tdCreateUser" runat="server">
+                  <td class="auto-style1" />
+                  <td id="tdCreateUser" runat="server" class="auto-style2">
                     <p>Username: <asp:TextBox ID="usernameTextbox" runat="server" />
                     <asp:RequiredFieldValidator 
                         ControlToValidate="usernameTextbox"
@@ -55,11 +63,7 @@
                               ControlToValidate="skuTextbox"
                               Text="You must enter an SKU."
                               runat="server" /></p>
-                      <p>Description: <asp:TextBox ID="descTextbox" runat="server" />
-                          <asp:RequiredFieldValidator
-                              ControlToValidate="descTextbox"
-                              Text="Description Required."
-                              runat="server" /></p>
+                      <p>Description: <asp:TextBox ID="descTextbox" runat="server" /></p>
                       <p>Colour: <asp:DropDownList ID="colourDropdown" runat="server">                               
                                     <asp:ListItem Text="Blue" Value="Blue" />
                                     <asp:ListItem Text="Green" Value="Green" />
@@ -68,9 +72,6 @@
                                  </asp:DropDownList></p>
                       <asp:Button ID="addProductButton" Text="Create" runat="server" OnClick="addProductButton_Click" />
                       <asp:Label ID="productFbLabel" runat="server" />
-                  </td>
-                  <td id="tdSchedule" runat="server">
-
                   </td>
               </tr>
           </table>
