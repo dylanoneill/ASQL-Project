@@ -27,8 +27,15 @@ namespace ASQLProject
 
             if (startDate != "" && startTime != "" && endTime != "")
             {
-                dal.ChangeSchedule(startDate, startTime, endTime, SKU);
-                errorLabel.Text = "Database Updated";
+                try
+                {
+                    dal.ChangeSchedule(startDate, startTime, endTime, SKU);
+                    errorLabel.Text = "Database Updated";
+                }
+                catch(Exception ex)
+                {
+                    errorLabel.Text = ex.Message;
+                }
             }
             else
             {
