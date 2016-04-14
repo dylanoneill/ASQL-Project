@@ -87,5 +87,10 @@ namespace ASQLProject {
             Session["Report"] = "First Time Yield";
             Response.Redirect("Chart.aspx");
         }
+
+        protected void scheduleButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Schedule.aspx");
+        }
     }
 }

@@ -30,7 +30,7 @@
                     <asp:Button Text="Defect Pareto Diagrams" ID="defectParetoButton" runat="server" OnClick="defectParetoButton_Click" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
-                    <asp:Button Text="Change Schedule" ID="scheduleButton" runat="server" Height="26px" Width="201px" CausesValidation="False" />
+                    <asp:Button Text="Change Schedule" ID="scheduleButton" runat="server" Height="26px" Width="201px" CausesValidation="False" OnClick="scheduleButton_Click" />
                     <br />
                     <br />
                     <asp:Button Text="Add Product" ID="createProductButton" runat="server" OnClick="createProductButton_Click" Width="201px" CausesValidation="False" />
