@@ -18,16 +18,22 @@ namespace ASQLProject
 
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
-            DateTime startDate = new DateTime();
-
-            startDate = Convert.ToDateTime(startDateTextBox.Text);
+            errorLabel.Text = "";
+            string startDate = startDateTextBox.Text;
             string startTime = startTimeTextBox.Text;
             string endTime = endTimeTextBox.Text;
-            string SKU = skuDropBox.DataValueField;
+            string SKU = skuDropBox.Text;
 
-          
-            
-            dal.ChangeSchedule(startDate, startTime, endTime, SKU);
+
+            if (startDate != "" && startTime != "" && endTime != "")
+            {
+                dal.ChangeSchedule(startDate, startTime, endTime, SKU);
+                errorLabel.Text = "Database Updated";
+            }
+            else
+            {
+                errorLabel.Text = "Invalid fields";
+            }
             
 
         }

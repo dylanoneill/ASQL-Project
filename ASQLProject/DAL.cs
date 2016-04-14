@@ -132,11 +132,11 @@ namespace ASQLProject {
             return dataTable;
         }
 
-        public void ChangeSchedule(DateTime startDate, string startTime, string endTime, string SKU)
+        public void ChangeSchedule(string startDate, string startTime, string endTime, string SKU)
         {
             conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO Schedule (startDate, startTime, endTime, SKU) VALUES ('" +
-                startDate.ToString() + "', '" + startTime + "', '" + endTime + "', '" + SKU + "')");
+            SqlCommand cmd = new SqlCommand("UPDATE Schedule SET startDate='" + startDate + "', startTime='" + startTime + "', endTime='"
+                + endTime + "' WHERE SKU='" + SKU + "';");
             cmd.Connection = conn;
             cmd.ExecuteNonQuery();
             conn.Close();

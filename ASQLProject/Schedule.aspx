@@ -41,6 +41,9 @@
         <br />
         <br />
         <asp:Button ID="UpdateButton" runat="server" OnClick="UpdateButton_Click" Text="Update" />
+        <br />
+        <br />
+        <asp:Label ID="errorLabel" runat="server"></asp:Label>
     
     </div>
     </form>
