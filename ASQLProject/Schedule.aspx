@@ -40,7 +40,7 @@
         </asp:DropDownList>
         <br />
         <br />
-        <asp:Button ID="UpdateButton" runat="server" Text="Update" />
+        <asp:Button ID="UpdateButton" runat="server" OnClick="UpdateButton_Click" Text="Update" />
     
     </div>
     </form>

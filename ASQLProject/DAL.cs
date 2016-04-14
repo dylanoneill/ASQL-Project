@@ -131,5 +131,15 @@ namespace ASQLProject {
             adapter.Fill(dataTable);
             return dataTable;
         }
+
+        public void ChangeSchedule(DateTime startDate, string startTime, string endTime, string SKU)
+        {
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Schedule (startDate, startTime, endTime, SKU) VALUES ('" +
+                startDate.ToString() + "', '" + startTime + "', '" + endTime + "', '" + SKU + "')");
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
     }
 }
