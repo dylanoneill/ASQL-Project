@@ -79,12 +79,12 @@ namespace ASQLProject {
         }
 
         protected void defectParetoButton_Click(object sender, EventArgs e) {
-            Session["Report"] = "Defects";
+            Session["Report"] = "Defect";
             Response.Redirect("Chart.aspx");
         }
 
         protected void firstYieldButton_Click(object sender, EventArgs e) {
-            Session["Report"] = "First Yield";
+            Session["Report"] = "First Time Yield";
             Response.Redirect("Chart.aspx");
         }
     }

@@ -21,13 +21,13 @@
           <table style="margin-bottom: 0px">
               <tr>
                   <td>
-                    <asp:Button Text="First Time Yield Report" ID="firstYieldButton" runat="server" OnClick="firstYieldButton_Click" Height="26px" Width="201px" />
+                    <asp:Button Text="First Time Yield Report" ID="firstYieldButton" runat="server" OnClick="firstYieldButton_Click" Height="26px" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
-                    <asp:Button Text="Final Yield Report" ID="finalYieldButton" runat="server" OnClick="finalYieldButton_Click" Width="201px" />
+                    <asp:Button Text="Final Yield Report" ID="finalYieldButton" runat="server" OnClick="finalYieldButton_Click" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
-                    <asp:Button Text="Defect Pareto Diagrams" ID="defectParetoButton" runat="server" OnClick="defectParetoButton_Click" Width="201px" />
+                    <asp:Button Text="Defect Pareto Diagrams" ID="defectParetoButton" runat="server" OnClick="defectParetoButton_Click" Width="201px" CausesValidation="False" />
                     <br />
                     <br />
                     <asp:Button Text="Change Schedule" ID="scheduleButton" runat="server" Height="26px" Width="201px" CausesValidation="False" />
@@ -40,7 +40,7 @@
                   </td>           
                   <td />
                   <td class="auto-style1" />
-                  <td id="tdCreateUser" runat="server" class="auto-style2">
+                  <td id="tdCreateUser" runat="server" >
                     <p>Username: <asp:TextBox ID="usernameTextbox" runat="server" />
                     <asp:RequiredFieldValidator 
                         ControlToValidate="usernameTextbox"

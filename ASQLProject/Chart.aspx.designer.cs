@@ -13,6 +13,15 @@ namespace ASQLProject {
     public partial class Chart {
         
         /// <summary>
+        /// reportHeading control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl reportHeading;
+        
+        /// <summary>
         /// chartForm control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,24 @@ namespace ASQLProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox endDateTextbox;
+        
+        /// <summary>
+        /// dateFilterButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button dateFilterButton;
+        
+        /// <summary>
+        /// dateFbLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dateFbLabel;
         
         /// <summary>
         /// trColour control.

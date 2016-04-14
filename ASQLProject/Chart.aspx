@@ -9,6 +9,7 @@
     <title>Prestige YoYo</title>
 </head>
 <body style="background-color:lightgrey"> 
+    <h1 id="reportHeading" style="color:white; background-color:cadetblue; font-family:Arial;" runat="server"></h1>
     <form id="chartForm" runat="server">
     <div>
         <table>
@@ -25,10 +26,13 @@
             </tr>
             <tr id="trDate" runat="server">
                 <td>
-                    <asp:Label Text="From:" runat="server" />
-                    <asp:TextBox ID="startDateTextbox" runat="server" />
-                    <asp:Label Text="To:" runat="server" />
+                    <p>Enter Date Range. Format: yyyy-mm-dd (hh:mm:ss AM/PM)</p>
+                    <asp:Label Text="Start Date:" runat="server" />
+                    <asp:TextBox ID="startDateTextbox" runat="server" />                    
+                    <asp:Label Text="End Date:" runat="server" />
                     <asp:TextBox ID="endDateTextbox" runat="server" />
+                    <asp:Button ID="dateFilterButton" runat="server" Text="Filter" OnClick="dateFilterButton_Click" />
+                    <asp:Label ID="dateFbLabel" runat="server" />
                 </td>
             </tr>
             <tr id="trColour" runat="server">
@@ -56,13 +60,12 @@
                 <td>
                     <asp:Label Text="Defect:" runat="server" />
                     <asp:DropDownList ID="defectDropdown" runat="server">
-
                     </asp:DropDownList>
                 </td>
             </tr>
         </table>
     </div>
-        <asp:Chart ID="reportChart" runat="server" EnableViewState="True" Width="541px" Style="background-color:lightgrey">
+        <asp:Chart ID="reportChart" runat="server" EnableViewState="True" Width="635px" Style="background-color:lightgrey" Height="380px">
             <series>
                 <asp:Series Name="reportChartSeries">
                 </asp:Series>
